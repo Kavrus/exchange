@@ -10,6 +10,12 @@ or even better
   1.eur.to_usd(:at => Time.now - 84600)
 which gets you an exchange at the rates of yesterday.
 
+==== Note on syntactic sugar
+
+To use the syntactic sugar (1.5.usd, 10.eur, etc.) need to manually include module "core_extensions/conversability" when initializing the application. This is done to avoid conflict between the method of "try" to ActiveSupport and Turkish lira.
+
+  require 'core_extensions/conversability'
+
 === Only one request per day to keep you up to date
 
 Imagine the exchange rates getting cached, and you hitting the internet only daily to get new rates (hourly if you're eager to have the absolutely newest ones)

@@ -13,6 +13,7 @@ end
 
 require 'shoulda'
 require 'exchange'
+require 'core_extensions/conversability'
 
 module HelperMethods
   def fixture(name)
